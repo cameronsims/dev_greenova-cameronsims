@@ -1,0 +1,63 @@
+:root:not([data-theme=dark]), [data-theme=light] {
+
+  /* Primary colours */
+  
+  /* Green Primary - Use Cases: Body backgrounds, icon backgrounds, buttons */
+  --greenova-green-primary: #909E77;
+
+  --pico-primary-background: var(--greenova-green-primary); /* Button backgrounds*/
+  
+  /* #B5C495 Green Secondary - Use Cases: Header backgrounds */
+  --greenova-green-secondary: #B5C495;
+
+  --pico-secondary-background: var(--greenova-green-secondary); /* Header background */
+
+  /*#697454: Green Tertiary Use Cases - Focus Areas on header or background backgrounds
+  #E5DED0: Beige Primary - Use Cases: Secondary accent, navigation bars, icons in focus
+  #CCBDAC: Beige Secondary - Use Cases: Beige alternate, when Beige Primary in use
+  */
+  
+  /* Background Primary - Use Cases: Frame Colour, main background*/
+  --greenova-background-primary: #E8EBE4; 
+
+  --pico-background-color: var(--greenova-background-primary); /* Background Primary */
+
+  /* Background Secondary - Use Cases: Container background colour*/
+
+  --greenova-background-secondary: #E2E7DD;
+
+  --pico-card-background-color: var(--greenova-background-secondary); /* Container Backgrounds */
+
+  /* Text Primary Dark - Use Cases: Immutable Text, for Titles. Icons */
+  --greenova-text-primary-dark: #000000;
+
+  /* Text Secondary Dark - Use Cases: Immutable Text, Headings and body*/
+  --greenova-text-secondary-dark: #303030;
+
+  /* Headers */
+  --pico-h1-color: var(--greenova-text-secondary-dark);
+  --pico-h2-color: var(--greenova-text-secondary-dark);
+  --pico-h3-color: var(--greenova-text-secondary-dark);
+  --pico-h4-color: var(--greenova-text-secondary-dark);
+  --pico-h5-color: var(--greenova-text-secondary-dark);
+  --pico-h6-color: var(--greenova-text-secondary-dark);
+
+  --pico-color: var(--greenova-text-primary-dark); /* Body text */
+
+  /* Text Tertiary Dark - Use Cases: Mutable Text, for text box hints */
+  --greenova-tertiary-dark: #B3B3B3;
+  
+  
+  /*Text Primary Light - Use Cases: All text on coloured backgrounds*/
+  --greenova-primary-light: #FFFFFF;
+  
+}
+
+header {
+  background: var(--pico-secondary-background)
+}
+
+/* Element is used for placeholder text before you type. */
+input[type='text']::placeholder {
+  color: var(--greenova-tertiary-dark); /* Mutable Text, for text box hints */
+}
