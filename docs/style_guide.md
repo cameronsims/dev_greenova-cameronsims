@@ -1,9 +1,11 @@
 # Style Guide
 
-To change the colours or any other visual information about the website, all values which are in this document must be prefixed by "--greenova" while if they exist in picocss must be overwritten.
-Please go to "static/components/colours.css".
-
 ## Colour Guide
+To change the colours used within the website, all values which are in this document must be prefixed by "--greenova" while if they exist in picocss must be overwritten.
+When adding a colour, make it clear that it is written for greenova, under the correct category and list the use cases. 
+When changing a colour of an existing element / pico variable please list the use case, using as little custom classes as possible.
+
+Please go to "static/components/colours.css".
 
 ### Primary Colours
 #909E77: Green Primary
@@ -58,7 +60,14 @@ Use Cases: Colour for when data points are out of focus of the chart.
 
 
 
-## Text Guide
+## Design Guide
+
+Text, Spacing and other information which edits how the website is shaped. Should be edited in the "static/css/components/design.css" file for editing.
+
+
+
+### Text Guide
+
 Font: Ubuntu
 Title: 24
 Sub Titles: 18 (Bold)
@@ -66,11 +75,8 @@ Text Entries: 16
 Table Entries: 14
 Buttons: 16 (Bold)
 
-
-
-
-## Spacing Guide
-Spacing GuideComponent Corner Radius: 8
+### Spacing Guide
+Component Corner Radius: 8
 Inter Component Spacing: 15
 Component Padding: 10
 
