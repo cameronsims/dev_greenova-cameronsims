@@ -288,8 +288,9 @@
       <nav class="pagination" aria-label="Obligations pagination">
         <ul class="pagination-list">
           {% if page_obj.has_previous %}
-            <li>
+            <li>Page
               <a href="#"
+                 role="button"
                  hx-get="{% url 'obligations:summary' %}?project_id={{ project_id }}&page={{ page_obj.previous_page_number }}{% for status in active_filters.status %}&status={{ status }}{% endfor %}{% for mechanism in active_filters.mechanism %}&mechanism={{ mechanism }}{% endfor %}{% for phase in active_filters.phase %}&phase={{ phase }}{% endfor %}{% if active_filters.search %}&search={{ active_filters.search }}{% endif %}&sort={{ active_filters.sort }}&order={{ active_filters.order }}"
                  hx-target=".obligations-section"
                  hx-swap="outerHTML"
@@ -309,6 +310,7 @@
           {% if page_obj.has_next %}
             <li>
               <a href="#"
+                 role="button"
                  hx-get="{% url 'obligations:summary' %}?project_id={{ project_id }}&page={{ page_obj.next_page_number }}{% for status in active_filters.status %}&status={{ status }}{% endfor %}{% for mechanism in active_filters.mechanism %}&mechanism={{ mechanism }}{% endfor %}{% for phase in active_filters.phase %}&phase={{ phase }}{% endfor %}{% if active_filters.search %}&search={{ active_filters.search }}{% endif %}&sort={{ active_filters.sort }}&order={{ active_filters.order }}"
                  hx-target=".obligations-section"
                  hx-swap="outerHTML"
