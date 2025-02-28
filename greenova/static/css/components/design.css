@@ -1,8 +1,8 @@
 /* This is the Ubuntu font we're using for the website */
 @font-face {
-    /* Imported statically to not rely on Google. */
-    font-family: 'Ubuntu';
-    src: url('/static/fonts/Ubuntu-Regular.ttf');
+  /* Imported statically to not rely on Google. */
+  font-family: 'Ubuntu';
+  src: url('/static/fonts/Ubuntu-Regular.ttf');
 }
 
 
@@ -60,7 +60,10 @@ h6 {
 }
 
 /* Mutable Text Entries */
-input, optgroup, select, textarea {
+input,
+optgroup,
+select,
+textarea {
   font-size: var(--greenova-text-size);
 }
 
@@ -94,6 +97,10 @@ button,
 
   border-radius: var(--greenova-border-radius);
   padding: var(--greenova-padding);
+}
+
+button#chat-toggle>span {
+  font-weight: normal !important;
 }
 
 /* If the button is apart of a menu... */
