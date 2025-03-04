@@ -29,7 +29,7 @@ table thead th {
   top: 0;
   background: var(--greenova-green-primary);
   z-index: 1;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--greenova-shadow);
 }
 
 /* Ensure certain columns have max width */
@@ -122,14 +122,13 @@ mark[role="status"] {
 
 /* Clickable obligation number styling */
 .obligation-link {
-  color: var(--primary);
+  color: var(--greenova-text-primary-dark);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s;
 }
 
 .obligation-link:hover {
-  color: var(--primary-hover);
   text-decoration: underline;
 }
 
@@ -147,25 +146,18 @@ mark[role="status"] {
 
 .action-btn {
   display: inline-flex;
-  align-items: center;
-  color: var(--primary);
   transition: background-color 0.2s, color 0.2s;
-  color: var(--text-color);
   background-color: transparent;
-  border-radius: 4px;
   height: 24px;
   width: 24px;
-  justify-content: center;
 }
 
-.action-btn:hover {
-  background-color: var(--background-alt);
-}
 
 .action-btn.edit:hover {
-  color: var(--info);
+  background: var(--greenova-info-background);
+  color: var(--greenova-info-text);
 }
 
 .action-btn.view:hover {
-  color: var(--primary);
+  color: var(--greenova-text-primary-dark);
 }

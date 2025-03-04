@@ -9,26 +9,39 @@
   --greenova-font-family: "Ubuntu";
   --greenova-font-weight: normal;
   --greenova-line-height: 1.125;
-  --greenova-letter-spacing: 1px;
+  --greenova-letter-spacing: 0.0625rem;
+  /* 1px */
 
   --pico-font-family: var(--greenova-font-family);
   --pico-font-weight: var(--greenova-font-weight);
   --pico-line-height: var(--greenova-line-height);
 
-  --greenova-border-radius: 8px;
-  --greenova-border-radius-small: 4px;
-  --greenova-spacing: 7.5px;
-  --greenova-spacing-small: 5px;
-  --greenova-padding: 10px;
-  --greenova-padding-small: 5px;
-  --greenova-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  --greenova-border-radius: 0.5rem;
+  /* 8px */
+  --greenova-border-radius-small: 0.25rem;
+  /* 4px */
+  --greenova-spacing: 0.46875rem;
+  /* 7.5px */
+  --greenova-spacing-small: 0.3125rem;
+  /* 5px */
+  --greenova-padding: 0.625rem;
+  /* 10px */
+  --greenova-padding-small: 0.3125rem;
+  /* 5px */
+  --greenova-shadow: 0 0.125rem 0.125rem rgba(0, 0, 0, 0.1);
+  /* 0 2px 2px */
 
-  --greenova-title-size: 24px;
-  --greenova-subtitle-size: 18px;
-  --greenova-text-size: 16px;
-  --greenova-table-size: 14px;
+  --greenova-title-size: 1.2rem;
+  /* 19.2px */
+  --greenova-subtitle-size: 0.9rem;
+  /* 14.4px */
+  --greenova-text-size: 0.8rem;
+  /* 12.8px */
+  --greenova-table-size: 0.7rem;
+  /* 11.2px */
 
-  --greenova-button-size: 16px;
+  --greenova-button-size: 0.8rem;
+  /* 12.8px */
 }
 
 /* Global Styles */
@@ -60,7 +73,7 @@ h6 {
 
 /* Header */
 header {
-  background: var(--pico-secondary-background);
+  background: var(--greenova-green-secondary);
 }
 
 /* Placeholder Text */
@@ -90,13 +103,13 @@ article {
 [role='navigation'] ul,
 [role='navigation'] ul li {
   border-radius: var(--greenova-border-radius);
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 [role='navigation'] [role="menuitem"] {
   border-radius: var(--greenova-border-radius);
-  margin: 0px;
+  margin: 0;
   padding: var(--greenova-padding);
 }
 

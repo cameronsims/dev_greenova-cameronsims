@@ -7,7 +7,9 @@ button,
 [role='button'],
 .btn-primary,
 .btn-secondary,
-.btn-danger {
+.btn-danger,
+.action-btn,
+.quick-filter-btn {
   font-size: var(--greenova-button-size);
   font-weight: bold !important;
   min-height: 41px;
@@ -23,7 +25,7 @@ button,
   }
 }
 
-button#chat-toggle > span {
+button#chat-toggle>span {
   font-weight: normal !important;
 }
 

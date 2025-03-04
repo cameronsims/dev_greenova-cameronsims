@@ -9,7 +9,7 @@
 .summary-cards article {
   padding: var(--greenova-spacing);
   border-radius: var(--greenova-border-radius);
-  background: var(--card-background-color);
+  background: var(--greenova-background-secondary);
 }
 
 .summary-cards .count {
@@ -208,8 +208,9 @@ td:nth-child(22) {
   display: inline-flex;
   align-items: center;
   gap: var(--greenova-spacing);
-  padding: var(--greenova-padding);;
-  background: var(--background-alt);
+  padding: var(--greenova-padding);
+  ;
+  background: var(--greenova-background-secondary);
   border-radius: var(--greenova-border-radius);
   font-size: var(--greenova-table-size);
 }
