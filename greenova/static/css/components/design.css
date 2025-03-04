@@ -32,16 +32,15 @@
   /* 0 2px 2px */
 
   --greenova-title-size: 1.2rem;
-  /* 19.2px */
   --greenova-subtitle-size: 0.9rem;
-  /* 14.4px */
   --greenova-text-size: 0.8rem;
-  /* 12.8px */
+  --greenova-input-label: 0.8rem;
+  --greenova-input-size: 0.75rem;
   --greenova-table-size: 0.7rem;
-  /* 11.2px */
-
   --greenova-button-size: 0.8rem;
-  /* 12.8px */
+
+  /* For visual clearity */
+  --greenova-table-border: 0.05rem solid #000000;
 }
 
 /* Global Styles */

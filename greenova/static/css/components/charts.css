@@ -103,8 +103,8 @@
 nav[role="navigation"].chart-nav {
   display: flex;
   justify-content: flex-end;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
+  gap: var(--greenova-padding);
+  margin-bottom: var(--greenova-spacing);
   position: sticky;
   top: 0;
   z-index: 2;
@@ -119,10 +119,10 @@ nav[role="navigation"].chart-nav button {
 
   margin: 0 var(--greenova-spacing-small);
   border: none;
-  padding: 0.5rem 1rem;
+  padding: var(--greenova-spacing-small) var(--greenova-spacing);
 }
 
-.chart-nav button:hover {
+nav[role="navigation"].chart-nav button:hover {
   background: var(--greenova-background-color);
   color: var(--greenova-text-primary-dark);
 }
