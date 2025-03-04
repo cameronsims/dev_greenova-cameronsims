@@ -14,7 +14,7 @@
 }
 
 .pagination-info {
-  color: var(--text-muted);
+  color: var(--greenova-tertiary-dark);
 }
 
 .pagination a {
