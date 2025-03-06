@@ -59,10 +59,8 @@ button#chat-toggle>span {
   gap: var(--greenova-spacing-small);
   margin-top: var(--greenova-spacing);
   padding-top: var(--greenova-padding);
+
 }
-
-
-
 
 
 /* Pico CSS Override */
@@ -78,4 +76,5 @@ nav li select {
 a[role='button'] {
   /* Used to make it look more like a proper button */
   padding-top: 0.55rem !important;
+  
 }
