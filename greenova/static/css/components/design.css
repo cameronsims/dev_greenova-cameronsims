@@ -7,6 +7,7 @@
 /* Root Variables */
 :root {
   --greenova-font-family: "Ubuntu";
+  --greenova-font-family: "Ubuntu";
   --greenova-font-weight: normal;
   --greenova-line-height: 1.125;
   --greenova-letter-spacing: 0.0625rem;
@@ -67,6 +68,7 @@ h6 {
   /* Subtitle */
   &:not(:first-child) {
     font-size: var(--greenova-subtitle-size);
+    font-size: var(--greenova-subtitle-size);
     font-weight: bold;
   }
 }
@@ -87,6 +89,7 @@ article {
   color: var(--greenova-text-secondary-dark);
   font-size: var(--greenova-text-size);
 }
+
 
 /* Navigation */
 [role='navigation'],
