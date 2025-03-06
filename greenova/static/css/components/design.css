@@ -70,15 +70,6 @@ h6 {
   }
 }
 
-/* Header */
-header {
-  background: var(--greenova-green-secondary);
-}
-
-/* Placeholder Text */
-input[type='text']::placeholder {
-  color: var(--greenova-tertiary-dark);
-}
 
 /* Paragraphs and Articles */
 p,
@@ -87,30 +78,6 @@ article {
   font-size: var(--greenova-text-size);
 }
 
-/* Navigation */
-[role='navigation'],
-[role='navigation'] [role="menuitem"] {
-  background: var(--greenova-beige-primary);
-  color: var(--greenova-text-primary-dark) !important;
-}
-
-[role='navigation'] [role="menuitem"][aria-current] {
-  background: var(--greenova-beige-secondary);
-}
-
-[role='navigation'],
-[role='navigation'] ul,
-[role='navigation'] ul li {
-  border-radius: var(--greenova-border-radius);
-  margin: 0;
-  padding: 0;
-}
-
-[role='navigation'] [role="menuitem"] {
-  border-radius: var(--greenova-border-radius);
-  margin: 0;
-  padding: var(--greenova-padding);
-}
 
 /* Form Elements */
 input,
@@ -120,9 +87,14 @@ textarea {
   font-size: var(--greenova-text-size);
 }
 
-/* Tables */
-table,
-table thead,
-table tbody {
-  font-size: var(--greenova-table-size) !important;
+
+audio,
+canvas,
+embed,
+iframe,
+img,
+object,
+svg,
+video {
+  display: inline;
 }

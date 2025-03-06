@@ -1,3 +1,14 @@
+/* Tables */
+table,
+table thead,
+table tbody {
+  font-size: var(--greenova-table-size) !important;
+}
+
+
+
+
+
 /* Table Styles */
 .table-container {
   overflow-x: auto;

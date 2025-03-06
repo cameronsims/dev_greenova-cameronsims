@@ -74,3 +74,8 @@ nav li select {
   /* Keeps add obligation inline with other buttons */
   margin: 0;
 }
+
+a[role='button'] {
+  /* Used to make it look more like a proper button */
+  padding-top: 0.55rem !important;
+}

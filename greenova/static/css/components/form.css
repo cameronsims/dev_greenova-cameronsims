@@ -1,3 +1,8 @@
+/* Placeholder Text */
+input[type='text']::placeholder {
+    color: var(--greenova-tertiary-dark);
+}
+
 /* Form layout and styling */
 .obligation-form {
     max-width: 100%;
