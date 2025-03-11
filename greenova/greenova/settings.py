@@ -82,6 +82,11 @@ INSTALLED_APPS = [
     'theme',
 ]
 
+# TAILWIND
+# Including configurations for Tailwind CSS
+TAILWIND_APP_NAME = 'theme'
+
+
 MIDDLEWARE = [
         'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
