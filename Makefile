@@ -48,6 +48,7 @@ prod:
 
 # Used to pre-compile tailwind CSS before running the application (we should maybe use this in run later)
 tailwind:
+	$(CD_CMD) python3 manage.py tailwind init
 	$(CD_CMD) python3 manage.py tailwind start
 
 # Combined command for database updates

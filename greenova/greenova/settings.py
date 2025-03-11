@@ -78,6 +78,8 @@ INSTALLED_APPS = [
     "mechanisms.apps.MechanismsConfig",
     "django_htmx",
     "django_hyperscript",
+    'tailwind',
+    'theme',
 ]
 
 MIDDLEWARE = [
