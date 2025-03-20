@@ -60,6 +60,12 @@ class ChatService:
         """Process an incoming chat message."""
         try:
             # TODO: Add actual message processing logic
+            #
+            # The variable "message" is the string input that the client has given us
+            # The variable "context" is JSON data.
+            # 
+
+
             response: Dict[str, Union[str, Dict[str, Any]]] = {
                 "status": "success",
                 "message": f"Echo: {message}",
