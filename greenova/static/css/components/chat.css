@@ -35,6 +35,7 @@
 
   /* Set a scroll bar to show up... */
   overflow-y: scroll;
+  height: 100%;
 
   background: var(--greenova-green-primary);
 }
