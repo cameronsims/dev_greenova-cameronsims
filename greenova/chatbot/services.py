@@ -2,6 +2,19 @@ from typing import Dict, Any, Optional, Union
 import logging
 from datetime import datetime
 
+####################################
+from .data.chatdata_pb2 import ChatBotResponse
+from .data.chatdata_pb2 import ChatBotPrompts
+
+# Read existing data...
+prompt_list = ChatBotPrompts()
+prompt_list_fname = "./chatbot/data/chatdata-serialised.protobin"
+
+with open(prompt_list_fname, "rb") as f:
+    prompt_list.ParseFromString(f.read())
+
+####################################
+
 logger = logging.getLogger(__name__)
 
 
@@ -65,10 +78,27 @@ class ChatService:
             # The variable "context" is JSON data.
             #
 
+            #
+            # message ChatBotResponse {
+            #     required string prompt = 1;
+            #     required string response = 2;
+            #     required int32 id = 3;
+            # }
+            #
+            # message ChatBotPrompts {
+            #     repeated ChatBotResponse responses = 1;
+            # }
+            #
+
             # This is the message that we sent the server, place this before response message...
             request_msg = f" <div class=\"chat-dialog user-dialog\">{message}</div>"
 
             response_text = "This is the text that we want to respond with."
+
+            for response in prompt_list.responses:
+                if response.prompt == message:
+                    response_text = response.response
+
             response_msg = f"<div class=\"chat-dialog chatbot-dialog\">{response_text}</div>"
             content_msg = request_msg + response_msg
 

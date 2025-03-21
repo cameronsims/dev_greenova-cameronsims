@@ -15,6 +15,8 @@ from .services import ChatService
 from .forms import ChatMessageForm
 import logging
 
+
+
 logger = logging.getLogger(__name__)
 
 class ChatResponse(TypedDict):
