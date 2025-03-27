@@ -171,6 +171,7 @@
           <h3>Detailed Statistics</h3>
         </header>
         <div class="table-container">
+          <button onclick="foldBelow(this)">Fold</button>
           <table role="grid">
             <thead>
               <tr>
@@ -216,6 +217,20 @@
     } else {
       container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
+  }
+
+  // Folds the table just below.
+  function foldBelow(elem) {
+    // Check if element is good.
+    if (!elem) { return false; }
+
+    // Make sure this routes correctly to the table, ajust if not working.
+    let elemTable = elem.nextElementSibling;
+    if (!elemTable) { return false; }
+
+    let elemTableDisplay = elemTable.style.display;
+    elemTable.style.display = (elemTableDisplay != 'none') ? 'none' : 'table';
+    return true;
   }
 </script>
 {% endblock body %}
