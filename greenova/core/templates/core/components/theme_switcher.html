@@ -6,7 +6,7 @@
            data-theme-switcher="{{ theme_value }}"
            _="on click
               set $theme to '{{ theme_value }}'
-              set document.documentElement.dataset.theme to '{{ theme_value }}' != 'auto' ? '{{ theme_value }}' : prefersDark ? 'dark' : 'light'
+              set document.documentElement.dataset.theme to {{theme_value}}
               localStorage.setItem('theme', $theme)
               call event.preventDefault()">
           {{ theme_name }}

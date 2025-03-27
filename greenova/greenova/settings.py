@@ -10,11 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+from shutil import which
 import sys
 import os
 from pathlib import Path
 from typing import Dict, List, TypedDict, Union
-from django.contrib import admin
 import mimetypes
 import sentry_sdk
 from dotenv_vault import load_dotenv
@@ -376,7 +376,7 @@ if "runserver" in sys.argv:
     os.environ.get("DJANGO_SETTINGS_MODULE")
 
 # Configure NPM path for Django Tailwind
-NPM_BIN_PATH = '/usr/local/share/nvm/versions/node/v18.20.7/bin/npm'
+NPM_BIN_PATH = which("npm") #'/usr/local/share/nvm/versions/node/v18.20.7/bin/npm'
 
 # Mimetypes configuration
 mimetypes.add_type("text/css", ".css", True)
