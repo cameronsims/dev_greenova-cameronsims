@@ -467,7 +467,7 @@
     {
       "args": [
         "-c",
-        "/usr/local/share/nvm/current/bin/markdownlint-cli2 \"${file}\""
+        "/usr/local/share/nvm/current/bin/markdownlint-cli2 --fix \"${file}\""
       ],
       "command": "/bin/sh",
       "group": "none",
@@ -734,6 +734,18 @@
       "command": "/bin/sh",
       "group": "none",
       "label": "Django: Check",
+      "presentation": {
+        "panel": "shared",
+        "reveal": "always"
+      },
+      "problemMatcher": [],
+      "type": "shell"
+    },
+    {
+      "args": ["-c", "cd greenova && python3 manage.py compile_protos"],
+      "command": "/bin/sh",
+      "group": "none",
+      "label": "Django: Compile Proto",
       "presentation": {
         "panel": "shared",
         "reveal": "always"
