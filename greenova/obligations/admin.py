@@ -41,7 +41,7 @@ class OverdueFilter(admin.SimpleListFilter):
 class ObligationAdminForm(forms.ModelForm):
     # Make recurring_obligation required but inspection optional
     recurring_obligation = forms.BooleanField(
-        required=True, widget=forms.CheckboxInput(attrs={'class': 'form-check-input'})
+        required=False, widget=forms.CheckboxInput(attrs={'class': 'form-check-input'})
     )
 
     inspection = forms.BooleanField(

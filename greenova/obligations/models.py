@@ -127,10 +127,11 @@ class Obligation(models.Model):
     non_conformance_comments: Optional[str] = models.TextField(blank=True, null=True)
     evidence_notes = models.TextField(blank=True, null=True,
                                       help_text='Notes about the uploaded evidence')
-    recurring_obligation = models.BooleanField(default=False)
+    recurring_obligation = models.BooleanField(default=False, null=True, blank=True)
     recurring_frequency: Optional[str] = models.CharField(
         max_length=50,
         null=True,
+        blank=True,
         choices=[
             ('Daily', 'Daily'),
             ('Weekly', 'Weekly'),

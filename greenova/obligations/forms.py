@@ -314,11 +314,11 @@ class ObligationForm(forms.ModelForm):
     )
 
     new_control_action_required = forms.BooleanField(
-        required=False, widget=forms.CheckboxInput(attrs={'class': 'form-checkbox'})
+        required=False, initial=False, widget=forms.CheckboxInput(attrs={'class': 'form-checkbox'})
     )
 
     gap_analysis = forms.BooleanField(
-        required=False, widget=forms.CheckboxInput(attrs={'class': 'form-checkbox'})
+        required=False, initial=False, widget=forms.CheckboxInput(attrs={'class': 'form-checkbox'})
     )
 
     notes_for_gap_analysis = forms.CharField(
@@ -521,7 +521,7 @@ class ObligationForm(forms.ModelForm):
                         field,
                         f'{field.replace("_", " ").title()} is required for recurring obligations',
                     )
-
+                    
         # Validate inspection fields
         inspection = cleaned_data.get('inspection')
         if inspection:
