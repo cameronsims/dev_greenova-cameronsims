@@ -78,15 +78,21 @@ def conversation_detail(request, conversation_id):
         'messages': messages,
     })
 
-
 @login_required
 @require_POST
 def send_message(request, conversation_id):
     """Process a new message in a conversation."""
+
+    # TODO:
+    # If we don't have a conversation_id...
+    # We should create one, this prevents us from having to create a new conversation everytime
+
+    # Create a query
     query = {'id': conversation_id, 'user': request.user}
     conversation = get_object_or_404(Conversation, **query)
 
     try:
+        print(conversation_id, request.user.id)
         data = json.loads(request.body)
         message_text = data.get('message', '').strip()
 

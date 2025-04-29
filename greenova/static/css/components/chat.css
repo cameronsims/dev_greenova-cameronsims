@@ -79,14 +79,16 @@
   max-width: 80%;
 }
 
+.user-dialog,
 .message.user {
-  background-color: var(--primary);
+  background-color: var(--greenova-green-primary);
   color: white;
   margin-left: auto;
 }
 
+.chatbot-dialog,
 .message.bot {
-  background-color: var(--secondary-background);
+  background-color: var(--greenova-beige-primary);
   margin-right: auto;
 }
 
@@ -269,20 +271,18 @@
   flex: 1;
 }
 
+.input-group button[type='submit'] {
+  flex-basis: fit-content;
+  margin-bottom: var(--greenova-spacing);
+  padding: var(--greenova-padding);
+  border-radius: 8px;
+  max-width: 20%;
+  height: 100%;
+}
+
 .chat-dialog {
   margin-bottom: var(--greenova-spacing);
   padding: var(--greenova-padding);
   border-radius: 8px;
   max-width: 80%;
-}
-
-.user-dialog {
-  background-color: var(--primary);
-  color: white;
-  margin-left: auto;
-}
-
-.chatbot-dialog {
-  background-color: var(--secondary-background);
-  margin-right: auto;
 }

@@ -7,15 +7,23 @@
   <main role="main">
     <article>
       <header>
-        <h1>{{ conversation.title }}</h1>
-        <p>Started on {{ conversation.created_at|date:"F j, Y" }}</p>
+        <h1>
+{{ conversation.title }}
+        </h1>
+        <p>
+Started on {{ conversation.created_at|date:"F j, Y" }}
+        </p>
       </header>
       <div class="chat-container">
         <div id="chat-messages" class="messages-container" aria-live="polite">
           {% for message in messages %}
             <div class="message {% if message.is_bot %}bot{% else %}user{% endif %}">
-              <div class="message-content">{{ message.content }}</div>
-              <div class="message-time">{{ message.timestamp|date:"H:i" }}</div>
+              <div class="message-content">
+{{ message.content }}
+              </div>
+              <div class="message-time">
+{{ message.timestamp|date:"H:i" }}
+              </div>
             </div>
           {% endfor %}
         </div>
@@ -25,14 +33,16 @@
               hx-swap="beforeend"
               hx-target="#chat-messages"
               _="on submit set #message-input.value to ''">
-          <div class="message-input-container">
+          <div class="message-input-container input-group">
             <input type="text"
                    id="message-input"
                    name="message"
                    placeholder="Type your message..."
                    required
                    aria-label="Message input" />
-            <button type="submit" aria-label="Send message">Send</button>
+            <button type="submit" aria-label="Send">
+Send
+            </button>
           </div>
         </form>
       </div>
@@ -60,7 +70,7 @@
 
         // Add user message to UI immediately
         const userMessageDiv = document.createElement('div');
-        userMessageDiv.className = 'message user';
+        userMessageDiv.className = 'user-dialog message user';
         userMessageDiv.innerHTML = `
           <div class="message-content">${message}</div>
           <div class="message-time">${new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</div>
@@ -74,7 +84,7 @@
         messagesContainer.scrollTop = messagesContainer.scrollHeight;
 
         // Send message to server
-        fetch(messageForm.action, {
+        fetch(messageForm.action + 'send/', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -84,6 +94,20 @@
         })
         .then(response => response.json())
         .then(data => {
+          // If we got some sort of error, we must say something and return 
+          if (data.error) {
+            const chatbox = document.getElementById('chat-messages');
+            let errorDiv = document.createElement('div');
+            errorDiv.className = 'chatbot-dialog message bot';
+            errorDiv.innerHTML = `
+              <div class="message-content">${data.error}, please try again later.</div>
+              <div class="message-time">${new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</div>
+            `;
+            messagesContainer.appendChild(errorDiv);
+            return;
+          }
+
+          console.log(data);
           // Add bot response to UI
           const botMessageDiv = document.createElement('div');
           botMessageDiv.className = 'message bot';
